@@ -7,6 +7,13 @@ class AlunosSchema(ModelSchema):
         model = Alunos
         fields = ['nome', 'email', 'faixa', 'data_nascimento']
 
+
+class UpdateAlunoSchema(Schema):
+    nome: str
+    email: str
+    faixa: str
+    data_nascimento: Optional[str]
+
 class ProgressoAlunoSchema(Schema):
     nome: str
     email: str
